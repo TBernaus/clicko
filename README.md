@@ -8,8 +8,8 @@
 `DB_USERNAME=root`\
 `DB_PASSWORD= contraseña_de_la_base_de_datos`
 
-3. `php artisan migrate --seed` para migrar los datos
-4. `php artisan serve` para arrancar el servidor
+3. `php artisan migrate --seed` Para migrar los datos
+4. `php artisan serve` Para arrancar el servidor
 
 ## Rutas
 - `GET /api/users`: Listar usuarios.
