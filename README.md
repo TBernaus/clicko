@@ -1,7 +1,15 @@
 ## Instalación
 1. `composer install`
 2. Configurar `.env` 
-3. `php artisan migrate --seed`
+`DB_CONNECTION=mysql` \
+`DB_HOST=127.0.0.1`\
+`DB_PORT=3306`\
+`DB_DATABASE=clicko`\
+`DB_USERNAME=root`\
+`DB_PASSWORD= contraseña_de_la_base_de_datos`
+
+3. `php artisan migrate --seed` para migrar los datos
+4. `php artisan serve` para arrancar el servidor
 
 ## Rutas
 - `GET /api/users`: Listar usuarios.
