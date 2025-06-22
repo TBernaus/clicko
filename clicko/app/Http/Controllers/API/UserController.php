@@ -8,22 +8,16 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        return User::all();
+        return User::all(); // JSON
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'name'     => 'required|string|max:255',
+            'email'    => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
         ]);
 
@@ -38,22 +32,16 @@ class UserController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(User $user)
     {
-        return $user;
+        return response()->json($user);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, User $user)
     {
         $request->validate([
-            'name' => 'sometimes|string|max:255',
-            'email' => 'sometimes|string|email:rfc,dns|max:255|unique:users,email,'.($user->id ?? 'NULL'),
+            'name'  => 'sometimes|string|max:255',
+            'email' => 'sometimes|string|email:rfc,dns|max:255|unique:users,email,' . $user->id,
         ]);
 
         try {
@@ -67,19 +55,12 @@ class UserController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(User $user)
     {
         $user->delete();
-
         return response()->json(null, 204);
     }
 
-    /**
-     * Get the top 3 most used email domains
-     */
     public function topDomains()
     {
         $domains = User::all()
