@@ -23,6 +23,6 @@
 - `/register`: Registrarse
 - `/login`:  Iniciar sesión
 - `/dashboard`: Dashboard
-- `/users`: Lista de usuarios
-- `/users/{id}`: Detalles de un usuario específico
-- `/top-domains`: Top 3 dominios de email juntamente a estadísticas.
+- `/users`: Lista de usuarios. Necesita un usuario registrado.
+- `/users/{id}`: Detalles de un usuario específico. Necesita un usuario registrado.
+- `/top-domains`: Top 3 dominios de email juntamente a estadísticas. No necesita iniciar sesión.
