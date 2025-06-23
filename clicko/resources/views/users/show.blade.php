@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Detalles del Usuario')
 
 @section('content')
 <div class="py-12">
