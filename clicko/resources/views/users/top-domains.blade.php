@@ -8,7 +8,7 @@
                 <div class="flex justify-between items-center mb-8">
                     <h1 class="text-3xl font-bold text-gray-800 dark:text-white">Top 3 Dominios de Email</h1>
                     <div class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-semibold">
-                        Total Usuarios con estos dominios: {{ array_sum($domains->toArray()) }}
+                        Total usuarios con estos dominios: {{ array_sum($domains->toArray()) }}
                     </div>
                 </div>
 
@@ -20,7 +20,7 @@
                                     Dominio
                                 </th>
                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                                    Cantidad de Usuarios
+                                    Cantidad de usuarios
                                 </th>
                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                                     Porcentaje
@@ -38,9 +38,6 @@
                                         <div class="ml-4">
                                             <div class="text-sm font-medium text-gray-900 dark:text-white">
                                                 {{ $domain }}
-                                            </div>
-                                            <div class="text-sm text-gray-500 dark:text-gray-400">
-                                                @example.com
                                             </div>
                                         </div>
                                     </div>
