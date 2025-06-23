@@ -9,7 +9,8 @@
 `DB_PASSWORD= contraseña_de_la_base_de_datos`
 
 3. `php artisan migrate --seed` Para migrar los datos.
-4. `php artisan serve` Para arrancar el servidor.
+4. `php artisan serve` Para arrancar el servidor.\
+El usuario por defecto será `Tomas@clicko.es` y la contraseña `password`
 
 ## Rutas para Postman
 - `GET /api/users`: Listar usuarios.
