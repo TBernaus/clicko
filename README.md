@@ -2,7 +2,7 @@
 Una vez clonado el repositorio y accedido al directorio correspondiente.
 1. `composer install`: Para instalar las dependencias de PHP. 
 2. Es necesario tener una base de datos previamente para poder usar esta aplicación. En mi caso, la base de datos se llamará `clicko` y trabajará en el puerto 3306.
-3. Renombrar el archivo `.env.example` a `.env`. Configurar el archivo `.env` con: 
+3. Renombrar el archivo `.env.example` a `.env`. Configurar el archivo `.env` con: \
 `DB_CONNECTION=mysql` \
 `DB_HOST=127.0.0.1`\
 `DB_PORT=3306`\
